@@ -9,7 +9,7 @@ def recursive_midpoint_sort(arr: list[int]) -> list[int]:
     if low == high:
         return arr
 
-    midpoint = (low + high) / 2
+    midpoint = low + (high - low + 1) // 2
 
     left = [x for x in arr if x < midpoint]
     right = [x for x in arr if x >= midpoint]
